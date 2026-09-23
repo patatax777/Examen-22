@@ -1,103 +1,60 @@
-# Examen práctico - Sistema de pedidos del kiosco
-# Nombre y apellido:kiyomi melillan
-# Curso:2 2
-#
-# IMPORTANTE:
-# Resolver el programa siguiendo las etapas indicadas en el README.md.
-# Realizar los commits y push cuando se indique.
+#def producto ():
 
+products = {"name_p" : ["Agua", "Alfajor", "Tostado"],
+             "price_p" : [700, 900, 2200]}
 
+#producto = ("Agua", "Alfajor", "Tostado")
+#precio = (700, 900, 2200)
+#for x, y in productos.items():
+#  print(x, y)
 
-# =========================
-# ETAPA 1 - INICIO
-# =========================
+name = input("ingrese su nombre: ")
+money = int(input("ingrese su dinero disponible: "))
 
-# Crear las variables necesarias.
-# Crear las listas de productos y precios.
-# Pedir los datos del cliente.
-
-nombre_c = 0
-dinero = 0
-dinero_g = 0
-productos_c = 0
-aguas_c = 0
-alfajor_c = 0
-tostados_c = 0
-
-producto = ("Agua", "Alfajor", "Tostado")
-precio = (700, 900, 2200)
-
-
-nombre_c = input("ingrese su nombre: ")
-dinero = input("ingrese su dinero disponible: ")
 
 print(f"""
       ♥♦♣♠KIOSKKO PATATAX777♠♣♦♥
-      
-      Hola {nombre_c}
-      Dinero disponible: ${dinero}
-      """)
+      Hola {name}!
+      Dinero disponible: ${money}
 
-# =========================
-# ETAPA 2 - COMPRAS
-# =========================
+        ---PRODUCTOS---
+        1. Agua       - $700
+        2. Alfajor    - $900
+        3. Tostado    - $2200
+        4. Consultar pedido
+        5. Finalizar compra
 
-# Mostrar el menú y procesar la opción seleccionada.
-# Utilizar las listas para obtener producto y precio.
+        por favor, seleccione una opción con los números:""")
+opcion = int(input("-"))
 
-print("""
----PRODUCTOS---
-1. Agua       - $700
-2. Alfajor    - $900
-3. Tostado    - $2200
-4. Consultar pedido
-5. Finalizar compra
-
-por favor, seleccione una opción con los números.
-""")
-opcion = int(input(": "))
 
 if opcion<1 or opcion>5:
     print("La opción seleccionada no se encuentra dentro de las opciónes. Por favor, vuelva a iniciar el programa.")
+
 elif opcion == 1:
-    print(f"{(producto[0])}: ${(precio[0])}")
+    for values in products.values():
+        print(values[0])
     
-    if dinero < 700:
+    if 700 > (money):
         print("Saldo insuficiente para realizar esta compra.")
     else:
-        dinero = dinero - 700
-        aguas_c = aguas_c + 1
-        productos_c = productos_c + 1
-        dinero_g = dinero_g + (precio[0])
+        money = money - 700
+        water = water + 1
+        products = products + 1
+        money_w = money_w + (price[0])
         
 elif opcion == 2:
-    print(f"{producto[1]}: ${precio[1]}")
+    print()
 elif opcion == 3:
-    print(f"{producto[2]}: ${precio[2]}")
+   print()
 elif opcion == 4:
-    print(f"{producto[3]}: ${precio[3]}")
+    print()
 elif opcion == 5:
-    print(f"{producto[4]}: ${precio[4]}")
-    
-    print (f"""{nombre_c}
-{dinero}
-{dinero_g}
-{productos_c}
-{aguas_c}
-{alfajor_c}
-{tostados_c}""")
-    
-# =========================
-# ETAPA 3 - CICLO PRINCIPAL
-# =========================
-
-# Modificar el programa para que continúe funcionando
-# hasta que el usuario decida finalizar la compra.
-
-
-# =========================
-# ETAPA 4 - PEDIDO Y RESUMEN
-# =========================
-
-# Mostrar el estado actual del pedido.
-# Recorrer las listas con un for para mostrar productos y precios.
+    print (f"""{name}
+            {money}
+            {money_w}
+            {products}
+            {water}
+            {alfajor}
+            {tostados}
+""")
