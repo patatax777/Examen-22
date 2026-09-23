@@ -16,13 +16,13 @@
 # Crear las listas de productos y precios.
 # Pedir los datos del cliente.
 
-nombre_c = 
-dinero = 
-dinero_g = 
-productos_c = 
-aguas_c = 
-alfajor_c = 
-tostados_c = 
+nombre_c = 0
+dinero = 0
+dinero_g = 0
+productos_c = 0
+aguas_c = 0
+alfajor_c = 0
+tostados_c = 0
 
 nombres_p = ("Agua", "Alfajor", "Tostado")
 precio_p = (700, 900, 2200)
@@ -44,13 +44,14 @@ print(f"""
 
 # Mostrar el menú y procesar la opción seleccionada.
 # Utilizar las listas para obtener producto y precio.
-"""
+
+print("""
 1. Agua       - $700
 2. Alfajor    - $900
 3. Tostado    - $2200
 4. Consultar pedido
 5. Finalizar compra
-"""
+""")
 
 
 # =========================
