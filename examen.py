@@ -24,8 +24,9 @@ aguas_c = 0
 alfajor_c = 0
 tostados_c = 0
 
-nombres_p = ("Agua", "Alfajor", "Tostado")
-precio_p = (700, 900, 2200)
+producto = ("Agua", "Alfajor", "Tostado")
+precio = (700, 900, 2200)
+
 
 nombre_c = input("ingrese su nombre: ")
 dinero = input("ingrese su dinero disponible: ")
@@ -59,12 +60,12 @@ opcion = int(input(": "))
 if opcion<1 or opcion>5:
     print("La opción seleccionada no se encuentra dentro de las opciónes. Por favor, vuelva a iniciar el programa.")
 elif opcion == 1:
-    print(f"{producto[0]}: ${precio[0]}")
+    print(f"{(producto[0])}: ${(precio[0])}")
     
-    if dinero < (precio[0]):
+    if dinero < 700:
         print("Saldo insuficiente para realizar esta compra.")
     else:
-        dinero = dinero - (precio[0])
+        dinero = dinero - 700
         aguas_c = aguas_c + 1
         productos_c = productos_c + 1
         dinero_g = dinero_g + (precio[0])
