@@ -9,7 +9,7 @@ quantity
     alfajores
     toasted
 products = sum(quantity)
-//list
+
 name:
     agua
     alfajor 
