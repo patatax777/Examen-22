@@ -30,11 +30,11 @@ product ={
 print (product)
 """
 print ("---KIOSKO PATATAX777---")
-print ()
 client = input("ingrese su nombre: ")
 c_money = input("ingrese su dinero: ")
+print ()
 input(f"""¡hola {client}!, estás ingresando al "KIOSKO PATATAX777".
-        su saldo disponible es de: {c_money}
+su saldo disponible es de: {c_money}
         
         presione "enter" para continuar--""")
 option = 1
@@ -56,3 +56,4 @@ while option != 5:
         print("COMPRA FINALIZADA")
     else:
         print("el número ingresado es inválido. por favor, seleccione un número que aparezca enn la tabla.")
+        input("press enter")
