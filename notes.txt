@@ -1,1 +1,58 @@
 notas xd 
+
+client
+c_money
+s_money
+
+quantity
+    waters
+    alfajores
+    toasted
+products = sum(quantity)
+//list
+name:
+    agua
+    alfajor 
+    tostado
+price:
+    700
+    900
+    2200
+
+1_input name n money
+2_welcome msg
+3_press enter input 
+4_products list 
+5_input option
+    1. Agua       - $700
+    2. Alfajor    - $900
+    3. Tostado    - $2200
+    4. Consultar pedido
+    5. Finalizar compra
+
+    #repeat until select 5
+        +if option do not exist
+        +after buying sm 
+        +after out of 4
+        +after cancelling purchase
+    
+    #if 4:
+        show
+            client
+            c_money
+            s_money
+            waters
+            alfajores
+            toasted
+            products
+        to get out of 4, enter
+
+    #if 1, 2, 3
+        check user money
+        confirm or cancell purchase
+        if confirm, modify:
+            products
+            (selected product)
+            c_money
+            s_money
+    
