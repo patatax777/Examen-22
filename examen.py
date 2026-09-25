@@ -4,11 +4,12 @@ product = {"Agua" : 700,
            "Alfajor" : 900,
            "Tostado" : 2200}
 """
-#creación de variavlea
+#import funciones
+from functions import selection
+#creación de variables
 name = ["Agua", "Alfajor", "Tostado"]
 price = [700, 900, 2200]
 quantity = [0, 0, 0]
-products = sum(quantity)
 s_money = 0  
 option = 1
 
@@ -57,30 +58,23 @@ while option != 5:
     print()
 
     if option == 1:
-        print(f"""producto seleccionado: {name[0]}
-costo del producto: {price[0]}
-saldo actual: {c_money}""")
-
-        if c_money >= price[0]:
-            yes_no = int(input("""desea comprar este producto?
-            sí = 1
-            no = 0
-            -"""))
-            if yes_no == 1:
-                quantity[0] += 1
-                c_money -= price[0]
-                s_money += price[0]
-                print("compra exitosa, regresando al menú principal...")
-            elif yes_no == 0:
-                print("""compra cancelada, regresando al menú principal...""")
-            else:
-                print("""opción no valida, compra cancelada. regresando al menú principal...""")
-        else:
-            print("no tienes suficiente dinero para comprar este producto")
-            input("press enter")
-        print ("")
+        c_money, s_money = selection(0, c_money, s_money, quantity) #modificación de copilot
+    elif option == 2:
+        c_money, s_money = selection(1, c_money, s_money, quantity) #antes: (1, c_money, s_money, quantity) 
+    elif option == 3:
+        c_money, s_money = selection(2, c_money, s_money, quantity) # ahora + c_money, s_money = selection(...)
     elif option == 4:
-        print()
+        print(f""" pedido y datos actuales:
+        nombre: {client}
+        saldo actual: {c_money}
+        dinero gastado: {s_money}
+
+    cantidad de productos: {sum(quantity)}
+        {name[0]}: {quantity[0]}
+        {name[1]}: {quantity[1]}
+        {name[2]}: {quantity[2]}
+        """)
+        input("presione enter para volver al menúmprincipál...")
     elif option == 5:
         print("COMPRA FINALIZADA")
     else:
