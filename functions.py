@@ -2,19 +2,19 @@ name = ["Agua", "Alfajor", "Tostado"]
 price = [700, 900, 2200]
 
 def selection (a,c_money,s_money,quantity):
-            print(f"""producto seleccionado: {name[a]}
-    costo del producto: {price[a]}
-    saldo actual: {c_money}""")
-    
             if c_money >= price[a]:
+                quant_2 = int(input("cuantas unidades desea comprar? "))
+                print(f"""producto seleccionado: {name[a]}
+                    costo del/los producto/s: {price[a]*quant_2}
+                    saldo actual: {c_money}""")
                 yes_no = int(input("""desea comprar este producto?
                 sí = 1
                 no = 0
                 -"""))
                 if yes_no == 1:
-                    quantity[a] += 1
-                    c_money = c_money - (price[a])
-                    s_money = s_money + (price[a])
+                    quantity[a] += quant_2
+                    c_money = c_money - (price[a] * quant_2)
+                    s_money = s_money + (price[a] * quant_2)
                     print("compra exitosa, regresando al menú principal...")
                 elif yes_no == 0:
                     print("""compra cancelada, regresando al menú principal...""")

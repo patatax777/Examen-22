@@ -77,7 +77,19 @@ while option != 5:
         input("presione enter para volver al menúmprincipál...")
     elif option == 5:
         print("COMPRA FINALIZADA")
+        print(f"""datos finales:
+        nombre: {client}
+        saldo final: {c_money}
+        dinero gastado: {s_money}
+
+        cantidad de productos: {sum(quantity)}
+        {name[0]}: {quantity[0]}
+        {name[1]}: {quantity[1]}
+        {name[2]}: {quantity[2]}
+        """)
+        #si copilot se acredita estas ultimas lineas de codigo es xq no quería escribir xddddd
     else:
         print("el número ingresado es inválido. por favor, seleccione un número que aparezca enn la tabla.")
         input("press enter")
-        #ya m canse wn quiero dibujar :w
+        #ya m canse wn quiero dibujar :w -NOOOOOOLLLLL w (xd)
+
